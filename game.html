@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+
+<head>
+    <title>Test Game</title>
+
+    <script src="js/basic.js"></script>
+    <script>
+        var yearNum = 892;
+        var month = 2;
+        var day = 27;
+        var yearText = "It's 892 A.D.";
+
+        function TickTime()
+        {
+            day++;
+            //Makes sure dates are valid
+            if(day < 1)
+            {
+                day = 1;
+            }
+            if(month < 1)
+            {
+                month = 1;
+            }
+            //Increments months
+            switch(month)
+            {
+                //January
+                case 1:
+                    if(day > 31)
+                    {
+                        month++;
+                        
+                        day = 1;
+                    }
+                    break;
+                //February
+                case 2:
+                    //Test for leap year, then adjusts math accordingly
+                    var leapYearTest = yearNum % 4;
+                    if (leapYearTest == 0)
+                    {
+                        console.log("tis leap year");
+                        if(day > 29)
+                        {
+                            month++;
+                            
+                            day = 1;
+                        }
+                    }
+                    else
+                    {
+                        console.log("tis not a leap year");
+                        if(day > 28)
+                        {
+                            month++;
+                            
+                            day = 1;
+                        }
+                    }
+                    break;
+                //March
+                case 3:
+                    if (day > 31)
+                    {
+                        month++;
+                        
+                        day = 1;
+                    }
+                    break;
+                //April
+                case 4:
+                    if (day > 30)
+                    {
+                        month++;
+                        
+                        day = 1;
+                    }
+                    break;
+                //May
+                case 5:
+                    if (day > 31)
+                    {
+                        month++;
+                        
+                        day = 1;
+                    }
+                    break;
+                //June
+                case 6:
+                    if (day > 30)
+                    {
+                        month++;
+                        
+                        day = 1;
+                    }
+                    break;
+                //July
+                case 7:
+                    if (day > 31)
+                    {
+                        month++;
+                        
+                        day = 1;
+                    }
+                    break;
+                //August
+                case 8:
+                    if (day > 31)
+                    {
+                        month++;
+                        
+                        day = 1;
+                    }
+                    break;
+                //September
+                case 9:
+                    if (day > 30)
+                    {
+                        month++;
+                        
+                        day = 1;
+                    }
+                    break;
+                //October
+                case 10:
+                    if (day > 31)
+                    {
+                        month++;
+                        
+                        day = 1;
+                    }
+                    break;
+                //November
+                case 11:
+                    if (day > 30)
+                    {
+                        month++;
+                        
+                        day = 1;
+                    }
+                    break;
+                //December
+                case 12:
+                    if (day > 31)
+                    {
+                        month++;
+                        
+                        day = 1;
+                    }
+                    break;
+                default:
+                    console.log("Invalid Month");
+                    break;
+            }
+            if(month > 12)
+            {
+                yearNum++;
+                month = 1;
+            }
+            yearText = day + " - " + month + " - " + yearNum + " A.D.";
+            console.log(yearText);
+            document.getElementById("year").innerHTML = yearText;
+        }
+    </script>
+
+    <style>
+        .center 
+        {
+            top: 0%;
+            left: 40%;
+            position: absolute;
+        }
+        a.text-link{
+            color: inherit;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<html>
+    <body>
+        <div class="center">
+            <h2 id="year">27 - 2 - 892 A.D.</h2>
+            <button onclick="TickTime()">Tick Time</button>
+        </div>
+        <div>
+            <a href="home.html" class="text-link"><h1>[GAME NAME HERE]</h1></a>
+            <h3>v0.0.1 Aeturnum</h3>
+        </div>
+        
+    </body>
+</html>
