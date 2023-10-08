@@ -33,7 +33,12 @@ var yearNum = 892;
 var month = 2;
 var day = 27;
 var yearText = "It's 892 A.D.";
+var gdp = 350;
+var isWar = false;
+var country = "Vseren";
+var isCrash = false;
 
+//sorry for the big function switch statements amr??
 function TickTime()
 {
     day++;
@@ -185,17 +190,36 @@ function TickTime()
     yearText = day + " - " + month + " - " + yearNum + " A.D.";
     console.log(yearText);
     document.getElementById("year").innerHTML = yearText;
+    TickGDP();
+    document.getElementById("gdp").innerHTML = gdp / 100 + "trillion PDW"
+}
+
+function TickGDP()
+{
+    var newNum = 1;
+    if(isWar == true)
+    {
+        newNum = newNum - 10;
+    }
+    if(country == "Vseren" && isCrash == true)
+    {
+        newNum = newNum - 25;
+    }
+    gdp = gdp + newNum;
 }
 
 function testLoadCookie()
 {
     var test = getCookie("test");
+    var new1 = getCookie("new");
     console.log(test);
     document.getElementById("testload").innerHTML = test;
+    document.getElementById("year").innerHTML = new1;
 }
 
 function testSaveCookie()
 {
     setCookie("test","wow",3650);
+    setCookie("new","oo",10);
     console.log("Cookie Saved");
 }
