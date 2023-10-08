@@ -196,13 +196,14 @@ function getCookie(cname)
 
         function testLoadCookie()
         {
-            setCookie("test","wow",10);
+            var test = getCookie("test");
+            console.log(test);
         }
 
         function testSaveCookie()
         {
-            var test = getCookie("test");
-            console.log(test);
+            setCookie("test","wow",10);
+            console.log("Cookie Saved");
         }
     </script>
 
