@@ -162,6 +162,48 @@
             console.log(yearText);
             document.getElementById("year").innerHTML = yearText;
         }
+
+        function setCookie(cname, cvalue, exdays) 
+{
+    const d = new Date();
+
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+
+    let expires = "expires="+d.toUTCString();
+
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+  
+function getCookie(cname) 
+{
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+
+    for(let i = 0; i < ca.length; i++) 
+    {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') 
+        {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) 
+        {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+        function testLoadCookie()
+        {
+            setCookie("test","wow",10);
+        }
+
+        function testSaveCookie()
+        {
+            var test = getCookie("test");
+            console.log(test);
+        }
     </script>
 
     <style>
@@ -185,9 +227,10 @@
             <button onclick="TickTime()">Tick Time</button>
         </div>
         <div>
-            <a href="home.html" class="text-link"><h1>[GAME NAME HERE]</h1></a>
+            <a href="index.html" class="text-link"><h1>[GAME NAME HERE]</h1></a>
             <h3>v0.0.1 Aeturnum</h3>
         </div>
-        
+        <button onclick="testSaveCookie">Save</button>
+        <button onclick="testLoadCookie">Load</button>
     </body>
 </html>
