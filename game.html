@@ -3,6 +3,14 @@
 <head>
     <title>Test Game</title>
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <script src="js/basic.js"></script>
     <script>
         var yearNum = 892;
@@ -167,6 +175,7 @@
         {
             var test = getCookie("test");
             console.log(test);
+            document.getElementById("testload").innerHTML = test;
         }
 
         function testSaveCookie()
@@ -176,18 +185,10 @@
         }
     </script>
 
-    <style>
-        .center 
-        {
-            top: 0%;
-            left: 40%;
-            position: absolute;
-        }
-        a.text-link{
-            color: inherit;
-            text-decoration: none;
-        }
-    </style>
+
+    <link rel = "stylesheet"
+        type = "text/css"
+        href = "css/baseStyle.css" />
 </head>
 
 <html>
@@ -202,5 +203,6 @@
         </div>
         <button onclick="testSaveCookie()">Save</button>
         <button onclick="testLoadCookie()">Load</button>
+        <p id="testload">Nothing Loaded</p>
     </body>
 </html>
