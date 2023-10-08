@@ -211,15 +211,12 @@ function TickGDP()
 function testLoadCookie()
 {
     var test = getCookie("test");
-    var new1 = getCookie("new");
     console.log(test);
     document.getElementById("testload").innerHTML = test;
-    document.getElementById("year").innerHTML = new1;
 }
 
 function testSaveCookie()
 {
     setCookie("test","wow",3650);
-    setCookie("new","oo",10);
     console.log("Cookie Saved");
 }
