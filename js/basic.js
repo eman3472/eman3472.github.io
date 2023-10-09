@@ -34,12 +34,12 @@ var month = 1;
 var day = 1;
 var yearText = "It's 892 A.D.";
 var pp = 350;
-var manpower = 99995;
+var manpower = 3174;
 var isAtWar = false;
 var country = "Vseren";
 var isCrash = false;
 
-//sorry for the big function switch statements amr??
+//sorry for the big function, switch statements amr??
 function TickTime()
 {
     day++;
