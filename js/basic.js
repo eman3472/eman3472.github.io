@@ -34,7 +34,7 @@ var month = 1;
 var day = 1;
 var yearText = "It's 892 A.D.";
 var pp = 350;
-var manpower = 100;
+var manpower = 99995;
 var isAtWar = false;
 var country = "Vseren";
 var isCrash = false;
@@ -202,14 +202,19 @@ function TickPP()
 
 function TickManpower()
 {
-    manpower = manpower + 1;
+    if(manpower < 99999)
+    {
+        manpower = manpower + 1;
+    }
 }
 
 function UpdateUI()
 {
+    var manpowerDecimal = manpower / 100;
+    console.log(manpowerDecimal);
     document.getElementById("year").innerHTML = day + " - " + month + " - " + year + " A.D.";
     document.getElementById("gdp").innerHTML = pp + "pp";
-    document.getElementById("manpower").innerHTML = manpower + " Million Manpower";
+    document.getElementById("manpower").innerHTML = manpowerDecimal + " Million Manpower";
 }
 
 function SaveGame()
