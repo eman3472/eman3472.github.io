@@ -227,11 +227,11 @@ function SaveGame()
 
 function LoadGame()
 {
-    year = getCookie("year");
+    year = Number(getCookie("year"));
     console.log("Cookie has been loaded. (year)");
-    month = getCookie("month");
+    month = Number(getCookie("month"));
     console.log("Cookie has been loaded. (month)");
-    day = getCookie("day");
+    day = Number(getCookie("day"));
     console.log("Cookie has been loaded. (day)");
     pp = Number(getCookie("pp"));
     console.log("Cookie has been loaded. (pp)");
