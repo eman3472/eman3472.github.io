@@ -29,12 +29,13 @@ function getCookie(cname)
     return "";
 }
 
-var yearNum = 892;
-var month = 2;
-var day = 27;
+var year = 1967;
+var month = 1;
+var day = 1;
 var yearText = "It's 892 A.D.";
-var gdp = 350;
-var isWar = false;
+var pp = 350;
+var manpower = 100;
+var isAtWar = false;
 var country = "Vseren";
 var isCrash = false;
 
@@ -184,28 +185,59 @@ function TickTime()
     }
     if(month > 12)
     {
-        yearNum++;
+        year++;
         month = 1;
     }
-    yearText = day + " - " + month + " - " + yearNum + " A.D.";
-    console.log(yearText);
-    document.getElementById("year").innerHTML = yearText;
-    TickGDP();
-    document.getElementById("gdp").innerHTML = gdp / 100 + "trillion PDW"
+    
+    TickPP();
+    TickManpower();
+    UpdateUI();
 }
 
-function TickGDP()
+function TickPP()
 {
-    var newNum = 1;
-    if(isWar == true)
-    {
-        newNum = newNum - 10;
-    }
-    if(country == "Vseren" && isCrash == true)
-    {
-        newNum = newNum - 25;
-    }
-    gdp = gdp + newNum;
+    pp = pp + 1;
+}
+
+function TickManpower()
+{
+    manpower = manpower + 1;
+}
+
+function UpdateUI()
+{
+    document.getElementById("year").innerHTML = day + " - " + month + " - " + year + " A.D.";
+    document.getElementById("gdp").innerHTML = pp + "pp";
+    document.getElementById("manpower").innerHTML = manpower + " Million Manpower";
+}
+
+function SaveGame()
+{
+    setCookie("year",year,3650);
+    console.log(getCookie("year") + " Cookie has been saved. (year)");
+    setCookie("month",year,3650);
+    console.log(getCookie("month") + " Cookie has been saved. (month)");
+    setCookie("day",year,3650);
+    console.log(getCookie("day") + " Cookie has been saved. (day)");
+    setCookie("pp",year,3650);
+    console.log(getCookie("pp") + " Cookie has been saved. (pp)");
+    setCookie("manpower",year,3650);
+    console.log(getCookie("manpower") + " Cookie has been saved. (manpower)");
+}
+
+function LoadGame()
+{
+    year = getCookie("year");
+    console.log("Cookie has been loaded. (year)");
+    year = getCookie("month");
+    console.log("Cookie has been loaded. (month)");
+    year = getCookie("day");
+    console.log("Cookie has been loaded. (day)");
+    year = getCookie("pp");
+    console.log("Cookie has been loaded. (pp)");
+    year = getCookie("manpower");
+    console.log("Cookie has been loaded. (manpower)");
+    UpdateUI();
 }
 
 function testLoadCookie()
