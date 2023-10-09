@@ -181,6 +181,7 @@ function TickTime()
             break;
         default:
             console.log("Invalid Month");
+            console.log("month");
             break;
     }
     if(month > 12)
