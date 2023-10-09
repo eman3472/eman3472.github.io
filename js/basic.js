@@ -1,4 +1,4 @@
-function setCookie(cname, cvalue, exdays) 
+function setCookie(cname, cvalue, exdays)
 {
     const d = new Date();
 
@@ -67,7 +67,7 @@ function TickTime()
         //February
         case 2:
             //Test for leap year, then adjusts math accordingly
-            var leapYearTest = yearNum % 4;
+            var leapYearTest = year % 4;
             if (leapYearTest == 0)
             {
                 console.log("tis leap year");
@@ -215,13 +215,13 @@ function SaveGame()
 {
     setCookie("year",year,3650);
     console.log(getCookie("year") + " Cookie has been saved. (year)");
-    setCookie("month",year,3650);
+    setCookie("month",month,3650);
     console.log(getCookie("month") + " Cookie has been saved. (month)");
-    setCookie("day",year,3650);
+    setCookie("day",day,3650);
     console.log(getCookie("day") + " Cookie has been saved. (day)");
-    setCookie("pp",year,3650);
+    setCookie("pp",pp,3650);
     console.log(getCookie("pp") + " Cookie has been saved. (pp)");
-    setCookie("manpower",year,3650);
+    setCookie("manpower",manpower,3650);
     console.log(getCookie("manpower") + " Cookie has been saved. (manpower)");
 }
 
@@ -229,13 +229,13 @@ function LoadGame()
 {
     year = getCookie("year");
     console.log("Cookie has been loaded. (year)");
-    year = getCookie("month");
+    month = getCookie("month");
     console.log("Cookie has been loaded. (month)");
-    year = getCookie("day");
+    day = getCookie("day");
     console.log("Cookie has been loaded. (day)");
-    year = getCookie("pp");
+    pp = Number(getCookie("pp"));
     console.log("Cookie has been loaded. (pp)");
-    year = getCookie("manpower");
+    manpower = Number(getCookie("manpower"));
     console.log("Cookie has been loaded. (manpower)");
     UpdateUI();
 }
