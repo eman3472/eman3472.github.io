@@ -273,6 +273,21 @@ function LoadGame()
     console.log("Cookie has been loaded. (bjets)");
     bships = Number(getCookie("bships"));
     console.log("Cookie has been loaded. (bjets)");
+
+    if(Number(getCookie("year")) == 0)
+    {
+        year = 1967;
+        month = 1;
+        day = 1;
+        pp = 360;
+        manpower = 3167;
+        infeq = 0;
+        supeq = 0;
+        tanks = 0;
+        fjets = 0;
+        bjets = 0;
+        bships = 0;
+    }
     UpdateUI();
 }
 
