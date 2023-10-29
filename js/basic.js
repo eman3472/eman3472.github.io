@@ -215,6 +215,12 @@ function UpdateUI()
     document.getElementById("year").innerHTML = day + " - " + month + " - " + year + " A.D.";
     document.getElementById("gdp").innerHTML = pp + "pp";
     document.getElementById("manpower").innerHTML = manpowerDecimal + " Million Manpower";
+    document.getElementById("inf").innerHTML = infEq + " Infantry Equipment";
+    document.getElementById("sup").innerHTML = supEq + " Support Equipment";
+    document.getElementById("tank").innerHTML = tanks + " Tanks";
+    document.getElementById("fjet").innerHTML = fjets + " Fighter Jets";
+    document.getElementById("bjet").innerHTML = bjets + " Bomber Jets";
+    document.getElementById("bship").innerHTML = bships + " Battleships";
 }
 
 function SaveGame()
@@ -229,6 +235,18 @@ function SaveGame()
     console.log(getCookie("pp") + " Cookie has been saved. (pp)");
     setCookie("manpower",manpower,3650);
     console.log(getCookie("manpower") + " Cookie has been saved. (manpower)");
+    setCookie("infeq",infEq,3650);
+    console.log(getCookie("infeq") + " Cookie has been saved. (infeq)");
+    setCookie("supeq",supEq,3650);
+    console.log(getCookie("supeq") + " Cookie has been saved. (supeq)");
+    setCookie("tanks",manpower,3650);
+    console.log(getCookie("tanks") + " Cookie has been saved. (tanks)");
+    setCookie("fjets",manpower,3650);
+    console.log(getCookie("fjets") + " Cookie has been saved. (fjets)");
+    setCookie("bjets",manpower,3650);
+    console.log(getCookie("bjets") + " Cookie has been saved. (bjets)");
+    setCookie("bships",manpower,3650);
+    console.log(getCookie("bships") + " Cookie has been saved. (bships)");
 }
 
 function LoadGame()
@@ -243,6 +261,18 @@ function LoadGame()
     console.log("Cookie has been loaded. (pp)");
     manpower = Number(getCookie("manpower"));
     console.log("Cookie has been loaded. (manpower)");
+    infEq = Number(getCookie("infeq"));
+    console.log("Cookie has been loaded. (infEq)");
+    supEq = Number(getCookie("supeq"));
+    console.log("Cookie has been loaded. (supeq)");
+    tanks = Number(getCookie("tanks"));
+    console.log("Cookie has been loaded. (tanks)");
+    fjets = Number(getCookie("fjets"));
+    console.log("Cookie has been loaded. (fjets)");
+    bjets = Number(getCookie("bjets"));
+    console.log("Cookie has been loaded. (bjets)");
+    bships = Number(getCookie("bships"));
+    console.log("Cookie has been loaded. (bjets)");
     UpdateUI();
 }
 
@@ -280,7 +310,6 @@ function PurchaseEQ(id)
             {
                 console.log("You poor");
             }
-            document.getElementById("inf").innerHTML = infEq + " Infantry Equipment";
             break;
 
         case 1:
@@ -293,7 +322,6 @@ function PurchaseEQ(id)
             {
                 console.log("You poor");
             }
-            document.getElementById("sup").innerHTML = supEq + " Support Equipment";
             break;
 
         case 2:
@@ -306,7 +334,6 @@ function PurchaseEQ(id)
             {
                 console.log("You poor");
             }
-            document.getElementById("tank").innerHTML = tanks + " Tanks";
             break;
 
         case 3:
@@ -319,7 +346,6 @@ function PurchaseEQ(id)
             {
                 console.log("You poor");
             }
-            document.getElementById("fjet").innerHTML = fjets + " Fighter Jets";
             break;
         
         case 4:
@@ -332,7 +358,6 @@ function PurchaseEQ(id)
             {
                 console.log("You poor");
             }
-            document.getElementById("bjet").innerHTML = bjets + " Bomber Jets";
             break;
         
         case 5:
@@ -345,7 +370,6 @@ function PurchaseEQ(id)
             {
                 console.log("You poor");
             }
-            document.getElementById("bship").innerHTML = bships + " Battleships";
             break;
 
             default:
