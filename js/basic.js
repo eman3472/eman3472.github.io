@@ -275,3 +275,13 @@ function LoadGame()
     console.log("Cookie has been loaded. (bjets)");
     UpdateUI();
 }
+
+function OpenHistory()
+{
+    SaveGame();
+    window.location.href='history.html';
+}
+function CloseHistory()
+{
+    window.location.href='game.html';
+}

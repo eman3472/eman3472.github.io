@@ -13,6 +13,7 @@
 
     <script src="js/basic.js"></script>
     <script src="js/equipment.js"></script>
+    <script src="js/diplomacy.js"></script>
 
     <link rel = "stylesheet"
         type = "text/css"
@@ -20,7 +21,7 @@
 </head>
 
 <html>
-    <body>
+    <body onload="LoadGame()">
         <div>
             <h1>
                 <a href="index.html"><img src = "favicon-32x32.png"></a> <a href="index.html" class="text-link">The Economy Wars</a>
@@ -33,45 +34,39 @@
         <hr>
         <h2 id="year">1 - 1 - 1967 A.D.</h2>
         <button class="button button2" onclick="TickTime()">Tick Time</button>
-
         <hr>
-
+        <button class="button button2" onclick="OpenHistory()">Events</button>
+        <hr>
         <h3>Stats</h3>
-        <p class="p1" id="country">Vsera</p>
-        <p class="p1" id="gdp">350pp</p>
-        <p class="p1" class="p1" id="manpower">31.74 Million Manpower</p>
-
+        <p id="country">Vsera</p>
+        <p id="gdp">350pp</p>
+        <p id="manpower">31.74 Million Manpower</p>
         <hr>
-
         <h3>Economy</h3>
-        <p class="p1">You currently have a good economy</p>
-        <p class="p1">You currently have a Free Trade policy</p>
+        <p>You currently have a good economy</p>
+        <p>You currently have a Free Trade policy</p>
         <button class="button button2">Free Trade</button> <button class="button button2">Closed Trade</button>
-        <p class="p1">You are currently decolonising</p>
-
+        <p>You are currently decolonising</p>
         <hr>
-
         <h3>Resources</h3>
-        <p class="p1">You have an abundance of steel</p>
-        <p class="p1">You have a stable supply of rubbber</p>
-        <p class="p1">You have a need for oil</p>
-        <p class="p1">You have an abundance of aluminum</p>
-        
+        <p>You have an abundance of steel</p>
+        <p>You have a stable supply of rubbber</p>
+        <p>You have a need for oil</p>
+        <p>You have an abundance of aluminum</p>
         <hr>
         <h3>Purchase Military Equipment</h3>
-        <p class="p1" id="inf">0 Infantry Equipment</p>
-        <p class="p1" id="sup">0 Support Equipment</p>
-        <p class="p1" id="tank">0 Tanks</P>
-        <p class="p1" id="fjet">0 Fighter Jets</p>
-        <p class="p1" id="bjet">0 Bomber Jets</p>
-        <p class="p1" id="bship">0 Battleships</p>
+        <p id="inf">0 Infantry Equipment</p>
+        <p id="sup">0 Support Equipment</p>
+        <p id="tank">0 Tanks</P>
+        <p id="fjet">0 Fighter Jets</p>
+        <p id="bjet">0 Bomber Jets</p>
+        <p id="bship">0 Battleships</p>
         <br>
         <button class="button button2" onclick="PurchaseEQ(0)">(10x) Infantry Eq. (10pp)</button> <button class="button button2" onclick="PurchaseEQ(1)">(10x) Support Eq. (10pp)</button> <button class="button button2" onclick="PurchaseEQ(2)">(1x) Tank (100p)</button>
         <br>
         <br>
         <button class="button button2" onclick="PurchaseEQ(3)">(1x) Fighter Jet (250pp)</button> <button class="button button2" onclick="PurchaseEQ(4)">(1x) Bomber Jet (260pp)</button> <button class="button button2" onclick="PurchaseEQ(5)">(1x) Battleship (350p)</button>
-        
         <hr>
-
+        <h3>Diplomacy</h3>
     </body>
 </html>
