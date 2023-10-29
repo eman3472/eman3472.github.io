@@ -212,7 +212,7 @@ function UpdateUI()
 {
     var manpowerDecimal = manpower / 100;
     console.log(manpowerDecimal);
-    document.getElementById("year").innerHTML = day + " - " + month + " - " + year + " A.D.";
+    document.getElementById("year").innerHTML = month + " - " + day + " - " + year + " A.D.";
     document.getElementById("gdp").innerHTML = pp + "pp";
     document.getElementById("manpower").innerHTML = manpowerDecimal + " Million Manpower";
     document.getElementById("inf").innerHTML = infEq + " Infantry Equipment";
@@ -239,13 +239,13 @@ function SaveGame()
     console.log(getCookie("infeq") + " Cookie has been saved. (infeq)");
     setCookie("supeq",supEq,3650);
     console.log(getCookie("supeq") + " Cookie has been saved. (supeq)");
-    setCookie("tanks",manpower,3650);
+    setCookie("tanks",tanks,3650);
     console.log(getCookie("tanks") + " Cookie has been saved. (tanks)");
-    setCookie("fjets",manpower,3650);
+    setCookie("fjets",fjets,3650);
     console.log(getCookie("fjets") + " Cookie has been saved. (fjets)");
-    setCookie("bjets",manpower,3650);
+    setCookie("bjets",bjets,3650);
     console.log(getCookie("bjets") + " Cookie has been saved. (bjets)");
-    setCookie("bships",manpower,3650);
+    setCookie("bships",bships,3650);
     console.log(getCookie("bships") + " Cookie has been saved. (bships)");
 }
 
