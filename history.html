@@ -11,13 +11,15 @@
     <meta name="theme-color" content="#ffffff">
 
     <script src="js/basic.js"></script>
+    <script src="js/history.js"></script>
+
     <link rel = "stylesheet"
     type = "text/css"
     href = "css/baseStyle.css" />
 </head>
 
 <html>
-    <body>
+    <body onload="LoadEvents()">
         <div>
             <h1>
                 <a href="index.html"><img src = "favicon-32x32.png"></a> <a href="index.html" class="text-link">The Economy Wars</a>
@@ -26,6 +28,10 @@
             <hr>
             <p id="testload">Sorry! No hablo ingles!.</p>
             <button class="button button2" onclick="CloseHistory()">Back</button>
+            <hr>
+            <div id="events">
+
+            </div>
         </div>
     </body>
 </html>

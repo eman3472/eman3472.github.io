@@ -38,11 +38,14 @@ var manpower = 3174;
 var isAtWar = false;
 var country = "Vseren";
 var isCrash = false;
+var pureDay = 1;
 
 //sorry for the big function, switch statements amr??
 function TickTime()
 {
     day++;
+    pureDay++;
+    setCookie("pureDay",pureDay,3650);
     //Makes sure dates are valid
     if(day < 1)
     {
