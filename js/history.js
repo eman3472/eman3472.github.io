@@ -1,6 +1,6 @@
 ﻿function LoadEvents()
 {
-    switch(Number(getCookie(pureDay)))
+    switch(Number(getCookie("pureDay")))
     {
         case 1:
             AppendEvents(0);
