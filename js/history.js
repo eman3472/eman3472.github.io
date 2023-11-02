@@ -6,6 +6,7 @@
 function LoadEvents()
 {
     document.getElementById("events").innerHTML = getCookie("events");
+    TickEvent();
 }
 
 function TickEvent()
