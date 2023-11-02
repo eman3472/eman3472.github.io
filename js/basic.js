@@ -29,23 +29,9 @@ function getCookie(cname)
     return "";
 }
 
-var year = 1967;
-var month = 1;
-var day = 1;
-var yearText = "It's 892 A.D.";
-var pp = 350;
-var manpower = 3174;
-var isAtWar = false;
-var country = "Vseren";
-var isCrash = false;
-var pureDay = 1;
-
-//sorry for the big function, switch statements amr??
-function TickTime()
+function IncrementDay()
 {
     day++;
-    pureDay++;
-    setCookie("pureDay",pureDay,3650);
     //Makes sure dates are valid
     if(day < 1)
     {
@@ -192,7 +178,16 @@ function TickTime()
         year++;
         month = 1;
     }
-    
+}
+
+function TickTime()
+{
+    for(let i = 0; i < 5; i++)
+    {
+        IncrementDay();
+    }
+    turn += 5;
+    setCookie("turn",pureDay,3650);
     TickPP();
     TickManpower();
     UpdateUI();
@@ -213,8 +208,10 @@ function TickManpower()
 
 function UpdateUI()
 {
+    //Loads UI elements that be shown with just the variable + some extra flavour text
+
+    //makes manpower a decimal
     var manpowerDecimal = manpower / 100;
-    console.log(manpowerDecimal);
     document.getElementById("year").innerHTML = month + " - " + day + " - " + year + " A.D.";
     document.getElementById("gdp").innerHTML = pp + "pp";
     document.getElementById("manpower").innerHTML = manpowerDecimal + " Million Manpower";
@@ -224,6 +221,8 @@ function UpdateUI()
     document.getElementById("fjet").innerHTML = fjets + " Fighter Jets";
     document.getElementById("bjet").innerHTML = bjets + " Bomber Jets";
     document.getElementById("bship").innerHTML = bships + " Battleships";
+
+    //Loads UI elements that don't directly show variable value
 }
 
 function SaveGame()
@@ -280,8 +279,8 @@ function LoadGame()
     if(Number(getCookie("year")) == 0)
     {
         year = 1967;
-        month = 1;
-        day = 1;
+        month = 12;
+        day = 13;
         pp = 360;
         manpower = 3167;
         infeq = 0;

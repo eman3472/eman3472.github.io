@@ -1,21 +1,36 @@
-﻿function LoadEvents()
+﻿function SaveEvents()
 {
-    switch(Number(getCookie("pureDay")))
-    {
-        case 1:
-            AppendEvents(0);
-            break;
-        case 2:
-            AppendEvents(0);
-            AppendEvents(1);
-            break;
-        default:
-            break;
-    }
-    console.log(Number(getCookie("pureDay")));
+    setCookie("events",document.getElementById("events").innerHTML,3650);
 }
 
-function AppendEvents(id)
+function LoadEvents()
 {
-    document.getElementById("events").innerHTML += "<button class='button button2'>Test</button>\n";
+    document.getElementById("events").innerHTML = getCookie("events");
+}
+
+function TickEvent()
+{
+    switch(Number(getCookie("turn")))
+    {
+        case 5:
+            AppendEvent(0);
+            break;
+        case 20:
+            AppendEvent(1);
+            break;
+    }
+    SaveEvents();
+}
+
+function AppendEvent(id)
+{
+    switch(id)
+    {
+        case 0: //Vseren decolonisation (no effect)
+            document.getElementById("events").innerHTML += event0;
+            break;
+        case 1: //First Market Crash (will have effect)
+            document.getElementById("events").innerHTML += event1;
+            break;
+    }
 }
