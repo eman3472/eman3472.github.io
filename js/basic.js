@@ -185,11 +185,12 @@ function TickTime()
     for(let i = 0; i < 5; i++)
     {
         IncrementDay();
+        TickPP();
+        TickManpower();
     }
     turn += 5;
-    setCookie("turn",pureDay,3650);
-    TickPP();
-    TickManpower();
+    console.log(turn);
+    setCookie("turn",turn,3650);
     UpdateUI();
 }
 
