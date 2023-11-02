@@ -20,6 +20,7 @@ function TickEvent()
             AppendEvent(1);
             break;
     }
+    console.log(Number(getCookie("turn")));
     SaveEvents();
 }
 
