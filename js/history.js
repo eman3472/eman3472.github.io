@@ -7,8 +7,8 @@ function SaveEvents()
 
 function LoadEvents()
 {
-    document.getElementById("events").innerHTML = getCookie("events");
     TickEvent();
+    document.getElementById("events").innerHTML = getCookie("events");
 }
 
 function TickEvent()
