@@ -1,6 +1,7 @@
 ﻿function SaveEvents()
 {
     setCookie("events",document.getElementById("events").innerHTML,3650);
+    console.log(document.getElementById("events").innerHTML);
 }
 
 function LoadEvents()
