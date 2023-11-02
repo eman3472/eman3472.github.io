@@ -1,7 +1,8 @@
-﻿function SaveEvents()
+﻿var eventsFull = "";
+
+function SaveEvents()
 {
-    setCookie("events",document.getElementById("events").innerHTML,3650);
-    console.log(document.getElementById("events").innerHTML);
+    setCookie("events",eventsFull,3650);
 }
 
 function LoadEvents()
@@ -30,10 +31,10 @@ function AppendEvent(id)
     switch(id)
     {
         case 0: //Vseren decolonisation (no effect)
-            document.getElementById("events").innerHTML += event0;
+            eventsFull += event0;
             break;
         case 1: //First Market Crash (will have effect)
-            document.getElementById("events").innerHTML += event1;
+            eventsFull += event1;
             break;
     }
 }
