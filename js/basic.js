@@ -250,6 +250,7 @@ function SaveGame()
     console.log(getCookie("bjets") + " Cookie has been saved. (bjets)");
     setCookie("bships",bships,3650);
     console.log(getCookie("bships") + " Cookie has been saved. (bships)");
+    setCookie("turn",turn,3650);
 }
 
 function LoadGame()
@@ -276,12 +277,14 @@ function LoadGame()
     console.log("Cookie has been loaded. (bjets)");
     bships = Number(getCookie("bships"));
     console.log("Cookie has been loaded. (bjets)");
+    turn = Number(getCookie("turn"));
 
     if(Number(getCookie("year")) == 0)
     {
         year = 1967;
         month = 12;
         day = 13;
+        turn = 0;
         pp = 360;
         manpower = 3167;
         infeq = 0;
