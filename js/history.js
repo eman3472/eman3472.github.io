@@ -1,29 +1,27 @@
 ﻿var eventsFull = "";
 
-function SaveEvents()
-{
-    setCookie("events",eventsFull,3650);
-}
-
 function LoadEvents()
 {
     TickEvent();
     document.getElementById("events").innerHTML = getCookie("events");
+    document.getElementById("events").innerHTML = eventsFull;
 }
 
 function TickEvent()
 {
-    switch(Number(getCookie("turn")))
+    let tempTurn = Number(getCookie("turn"));
+    switch(tempTurn)
     {
-        case 5:
+        case tempTurn >= 5:
             AppendEvent(0);
             break;
-        case 20:
+        case tempTurn >= 20:
             AppendEvent(1);
             break;
     }
     console.log(Number(getCookie("turn")));
-    SaveEvents();
+    console.log(eventsFull);
+    setCookie("events",eventsFull,3650);
 }
 
 function AppendEvent(id)
