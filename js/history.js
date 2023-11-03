@@ -10,14 +10,13 @@ function LoadEvents()
 function TickEvent()
 {
     let tempTurn = Number(getCookie("turn"));
-    switch(tempTurn)
+    if(tempTurn >= 5)
     {
-        case tempTurn >= 5:
-            AppendEvent(0);
-            break;
-        case tempTurn >= 20:
-            AppendEvent(1);
-            break;
+        AppendEvent(0);
+    }
+    if(tempTurn >= 20)
+    {
+        AppendEvent(1);
     }
     console.log(Number(getCookie("turn")));
     console.log(eventsFull);
