@@ -13,7 +13,7 @@
             }
             break;
         case 2:
-            if(contry == 0)
+            if(country == 0)
             {
                 ppTurn -= 5;
             }
