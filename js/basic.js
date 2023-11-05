@@ -185,25 +185,25 @@ function TickTime()
     for(let i = 0; i < 5; i++)
     {
         IncrementDay();
-        TickPP();
-        TickManpower();
     }
     turn += 5;
+    TickPP();
+    TickManpower();
     console.log(turn);
-    setCookie("turn",turn,3650);
+    SaveGame();
     UpdateUI();
 }
 
 function TickPP()
 {
-    pp = pp + 1;
+    pp += ppTurn;
 }
 
 function TickManpower()
 {
     if(manpower < 99999)
     {
-        manpower = manpower + 1;
+        manpower += manpowerTurn;
     }
 }
 
@@ -251,6 +251,11 @@ function SaveGame()
     setCookie("bships",bships,3650);
     console.log(getCookie("bships") + " Cookie has been saved. (bships)");
     setCookie("turn",turn,3650);
+    console.log(getCookie("turn") + " Cookie has been saved. (turn)");
+    setCookie("ppTurn",ppTurn,3650);
+    console.log(getCookie("ppTurn") + " Cookie has been saved. (ppTurn)");
+    setCookie("manpowerTurn",manpowerTurn,3650);
+    console.log(getCookie("manpowerTurn") + " Cookie has been saved. (manpowerTurn)");
 }
 
 function LoadGame()
@@ -278,12 +283,14 @@ function LoadGame()
     bships = Number(getCookie("bships"));
     console.log("Cookie has been loaded. (bjets)");
     turn = Number(getCookie("turn"));
+    ppTurn = Number(getCookie("ppTurn"));
+    manpowerTurn = Number(getCookie("mapowerTurn"));
 
     if(Number(getCookie("year")) == 0)
     {
-        year = 1967;
-        month = 12;
-        day = 13;
+        year = 1970;
+        month = 5;
+        day = 10;
         turn = 0;
         pp = 360;
         manpower = 3167;
@@ -305,4 +312,10 @@ function OpenHistory()
 function CloseHistory()
 {
     window.location.href='game.html';
+}
+
+function ResetGame()
+{
+    setCookie("year",0,3650)
+    LoadGame();
 }

@@ -13,6 +13,7 @@
 
     <script src="js/basic.js"></script>
     <script src="js/stats.js"></script>
+    <script src="js/effects.js"></script>
     <script src="js/equipment.js"></script>
     <script src="js/diplomacy.js"></script>
 
@@ -30,10 +31,9 @@
             <h3>v0.0.2 Aeturnum</h3>
         </div>
         <hr>
-        <button class="button button2" onclick="SaveGame()">Save</button>
-        <button class="button button2" onclick="LoadGame()">Load</button>
+        <button class="button button2" onclick="ResetGame()">Reset Game</button>
         <hr>
-        <h2 id="year">12 - 13 - 1967 A.D.</h2>
+        <h2 id="year">5 - 10 - 1970 A.D.</h2>
         <button class="button button2" onclick="TickTime()">End Turn</button>
         <hr>
         <button class="button button2" onclick="OpenHistory()">Events</button>
@@ -42,11 +42,6 @@
         <p id="country">Vsera</p>
         <p id="gdp">350pp</p>
         <p id="manpower">31.74 Million Manpower</p>
-        <hr>
-        <h3>Economy</h3>
-        <p>You currently have a good economy</p>
-        <p>You currently have a Free Trade policy</p>
-        <button class="button button2">Free Trade</button> <button class="button button2">Closed Trade</button>
         <hr>
         <h3>Resources</h3>
         <p id="steel">Steel: 30</p>

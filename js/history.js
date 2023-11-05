@@ -4,7 +4,6 @@ function LoadEvents()
 {
     TickEvent();
     document.getElementById("events").innerHTML = getCookie("events");
-    document.getElementById("events").innerHTML = eventsFull;
 }
 
 function TickEvent()
@@ -17,6 +16,12 @@ function TickEvent()
     if(tempTurn >= 20)
     {
         AppendEvent(1);
+        Effect(1);
+    }
+    if(tempTurn >= 30)
+    {
+        AppendEvent(2);
+        Effect(2);
     }
     console.log(Number(getCookie("turn")));
     console.log(eventsFull);
@@ -32,6 +37,9 @@ function AppendEvent(id)
             break;
         case 1: //First Market Crash (will have effect)
             eventsFull += event1;
+            break;
+        case 2: //Black Monday
+            eventsFull += event2;
             break;
     }
 }

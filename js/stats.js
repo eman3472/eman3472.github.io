@@ -7,6 +7,9 @@ var day = 13;
 var pp = 350;
 var manpower = 3174;
 
+var ppTurn = 5;
+var manpowerTurn = 5;
+
 //Math stuff
 var turn = 0;
 
