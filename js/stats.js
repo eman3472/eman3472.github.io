@@ -1,7 +1,7 @@
 ﻿//Date
-var year = 1967;
-var month = 12;
-var day = 13;
+var year = 1970;
+var month = 5;
+var day = 10;
 
 //Currencies
 var pp = 350;
@@ -15,3 +15,11 @@ var turn = 0;
 
 //Country info
 var country = 0; //Country is stored as an index
+
+//Equipment
+var infEq = 0;
+var supEq = 0;
+var tanks = 0;
+var fjets = 0;
+var bjets = 0;
+var bships = 0;

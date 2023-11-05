@@ -3,7 +3,7 @@
     switch(id)
     {
         case 1:
-            if(country == "Vsera")
+            if(country == 0)
             {
                 ppTurn -= 5;
             }
@@ -13,7 +13,7 @@
             }
             break;
         case 2:
-            if(contry == "Vsera")
+            if(contry == 0)
             {
                 ppTurn -= 5;
             }

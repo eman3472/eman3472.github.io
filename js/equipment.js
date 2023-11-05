@@ -1,11 +1,4 @@
-﻿var infEq = 0;
-var supEq = 0;
-var tanks = 0;
-var fjets = 0;
-var bjets = 0;
-var bships = 0;
-
-function PurchaseEQ(id)
+﻿function PurchaseEQ(id)
 {
     switch(id)
     {
