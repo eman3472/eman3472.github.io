@@ -2,6 +2,7 @@
 
 function LoadEvents()
 {
+    console.log(year);
     TickEvent();
     document.getElementById("events").innerHTML = eventsFull;
 }
