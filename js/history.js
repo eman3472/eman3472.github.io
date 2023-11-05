@@ -3,7 +3,7 @@
 function LoadEvents()
 {
     TickEvent();
-    document.getElementById("events").innerHTML = getCookie("events");
+    document.getElementById("events").innerHTML = eventsFull;
 }
 
 function TickEvent()
