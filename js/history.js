@@ -3,6 +3,8 @@
 function LoadEvents()
 {
     console.log(year);
+    console.log(month);
+    console.log(day);
     TickEvent();
     document.getElementById("events").innerHTML = eventsFull;
 }
