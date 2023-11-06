@@ -24,5 +24,4 @@
             console.log("Event " + id + " has no effects");
             break;
     }
-    SaveGame();
 }
