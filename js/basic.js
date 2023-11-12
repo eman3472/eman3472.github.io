@@ -189,6 +189,7 @@ function TickTime()
     turn += 5;
     TickPP();
     TickManpower();
+    TickResources();
     console.log(turn);
     SaveGame();
     UpdateUI();
@@ -209,83 +210,100 @@ function TickManpower()
 
 function UpdateUI()
 {
-    //Loads UI elements that be shown with just the variable + some extra flavour text
-
     //makes manpower a decimal
     var manpowerDecimal = manpower / 100;
+
+    //Loads UI elements that be shown with just the variable + some extra flavour text
     document.getElementById("year").innerHTML = month + " - " + day + " - " + year + " A.D.";
     document.getElementById("gdp").innerHTML = pp + "pp";
     document.getElementById("manpower").innerHTML = manpowerDecimal + " Million Manpower";
+    document.getElementById("oil").innerHTML = "Oil: " + oil;
+    document.getElementById("steel").innerHTML = "Steel: " + steel;
+    document.getElementById("aluminum").innerHTML = "Aluminum: " + aluminum;
     document.getElementById("inf").innerHTML = infEq + " Infantry Equipment";
     document.getElementById("sup").innerHTML = supEq + " Support Equipment";
     document.getElementById("tank").innerHTML = tanks + " Tanks";
     document.getElementById("fjet").innerHTML = fjets + " Fighter Jets";
     document.getElementById("bjet").innerHTML = bjets + " Bomber Jets";
     document.getElementById("bship").innerHTML = bships + " Battleships";
-
-    //Loads UI elements that don't directly show variable value
 }
 
 function SaveGame()
 {
+    //Date
     setCookie("year",year,3650);
-    console.log(getCookie("year") + " Cookie has been saved. (year)");
     setCookie("month",month,3650);
-    console.log(getCookie("month") + " Cookie has been saved. (month)");
     setCookie("day",day,3650);
-    console.log(getCookie("day") + " Cookie has been saved. (day)");
+
+    //Currencies
     setCookie("pp",pp,3650);
-    console.log(getCookie("pp") + " Cookie has been saved. (pp)");
     setCookie("manpower",manpower,3650);
-    console.log(getCookie("manpower") + " Cookie has been saved. (manpower)");
+
+    //Equipment
     setCookie("infeq",infEq,3650);
-    console.log(getCookie("infeq") + " Cookie has been saved. (infeq)");
     setCookie("supeq",supEq,3650);
-    console.log(getCookie("supeq") + " Cookie has been saved. (supeq)");
     setCookie("tanks",tanks,3650);
-    console.log(getCookie("tanks") + " Cookie has been saved. (tanks)");
     setCookie("fjets",fjets,3650);
-    console.log(getCookie("fjets") + " Cookie has been saved. (fjets)");
     setCookie("bjets",bjets,3650);
-    console.log(getCookie("bjets") + " Cookie has been saved. (bjets)");
     setCookie("bships",bships,3650);
-    console.log(getCookie("bships") + " Cookie has been saved. (bships)");
+
+    //Turn
     setCookie("turn",turn,3650);
-    console.log(getCookie("turn") + " Cookie has been saved. (turn)");
     setCookie("ppTurn",ppTurn,3650);
-    console.log(getCookie("ppTurn") + " Cookie has been saved. (ppTurn)");
     setCookie("manpowerTurn",manpowerTurn,3650);
-    console.log(getCookie("manpowerTurn") + " Cookie has been saved. (manpowerTurn)");
+
+    //Resources
+    setCookie("oil",oil,3650);
+    setCookie("steel",steel,3650);
+    setCookie("aluminum",aluminum,3650);
+
+    setCookie("oilWells",oilWells,3650);
+    setCookie("steelMines",steelMines,3650);
+    setCookie("aluminumMines",aluminumMines,3650);
+
+    setCookie("oilEfficiency",oilEfficiency,3650);
+    setCookie("steelEfficiency",steelEfficiency,3650);
+    setCookie("aluminumEfficiency",aluminumEfficiency,3650);
 }
 
 function LoadGame()
 {
+    //Date
     year = Number(getCookie("year"));
-    console.log("Cookie has been loaded. (year)");
     month = Number(getCookie("month"));
-    console.log("Cookie has been loaded. (month)");
     day = Number(getCookie("day"));
-    console.log("Cookie has been loaded. (day)");
+
+    //Currencies
     pp = Number(getCookie("pp"));
-    console.log("Cookie has been loaded. (pp)");
     manpower = Number(getCookie("manpower"));
-    console.log("Cookie has been loaded. (manpower)");
+
+    //Equipment
     infEq = Number(getCookie("infeq"));
-    console.log("Cookie has been loaded. (infEq)");
     supEq = Number(getCookie("supeq"));
-    console.log("Cookie has been loaded. (supeq)");
     tanks = Number(getCookie("tanks"));
-    console.log("Cookie has been loaded. (tanks)");
     fjets = Number(getCookie("fjets"));
-    console.log("Cookie has been loaded. (fjets)");
     bjets = Number(getCookie("bjets"));
-    console.log("Cookie has been loaded. (bjets)");
     bships = Number(getCookie("bships"));
-    console.log("Cookie has been loaded. (bjets)");
+
+    //Turn
     turn = Number(getCookie("turn"));
     ppTurn = Number(getCookie("ppTurn"));
     manpowerTurn = Number(getCookie("mapowerTurn"));
 
+    //Resources
+    oil =  Number(getCookie("oil"));
+    steel =  Number(getCookie("steel"));
+    aluminum =  Number(getCookie("aluminum"));
+
+    oilWells =  Number(getCookie("oilWells"));
+    steelMines =  Number(getCookie("steelMines"));
+    aluminumMines =  Number(getCookie("aluminumMines"));
+
+    oilEfficiency =  Number(getCookie("oilEfficiency"));
+    steelEfficiency =  Number(getCookie("steelEfficiency"));
+    aluminumEfficiency =  Number(getCookie("aluminumEfficiency"));
+
+    //Resets game if there is no cookie
     if(Number(getCookie("year")) == 0)
     {
         year = 1970;
@@ -300,6 +318,15 @@ function LoadGame()
         fjets = 0;
         bjets = 0;
         bships = 0;
+        oil = 50;
+        steel = 50;
+        aluminum = 50;
+        oilWells = 3;
+        steelMines = 5;
+        aluminumMines = 4;
+        oilEfficiency = 1;
+        steelEfficiency = 1;
+        aluminumEfficiency = 1;
     }
     UpdateUI();
 }
@@ -309,7 +336,17 @@ function OpenHistory()
     SaveGame();
     window.location.href='history.html';
 }
-function CloseHistory()
+function OpenDiplo()
+{
+    SaveGame();
+    window.location.href='diplomacy.html';
+}
+function OpenWar()
+{
+    SaveGame();
+    window.location.href='war.html';
+}
+function ClosePage()
 {
     window.location.href='game.html';
 }
