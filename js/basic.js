@@ -311,7 +311,9 @@ function LoadGame()
         day = 10;
         turn = 0;
         pp = 360;
+        ppTurn = 5;
         manpower = 3167;
+        manpowerTurn = 5;
         infeq = 0;
         supeq = 0;
         tanks = 0;
