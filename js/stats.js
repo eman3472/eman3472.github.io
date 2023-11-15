@@ -14,7 +14,7 @@ var manpowerTurn = 5;
 var turn = 0;
 
 //Country info
-var playerCountry = 0; //Country is stored as an index
+var country = 0; //Country is stored as an index
 
 //Equipment
 var infEq = 0;

@@ -26,6 +26,7 @@ function TickEvent()
         AppendEvent(2);
         Effect(2);
     }
+    console.log(tempTurn);
     console.log(Number(getCookie("turn")));
     console.log(eventsFull);
     setCookie("events",eventsFull,3650);
