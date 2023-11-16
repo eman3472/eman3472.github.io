@@ -15,10 +15,10 @@
             break;
 
         case 1:
-            if(pp >= 10)
+            if(pp >= 5)
             {
-                pp -= 10;
-                supEq += 10;
+                pp -= 5;
+                supEq += 5;
             }
             else
             {

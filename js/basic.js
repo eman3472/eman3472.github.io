@@ -266,7 +266,7 @@ function SaveGame()
     setCookie("aluminumEfficiency",aluminumEfficiency,3650);
 }
 
-function LoadGame()
+function LoadGame(updateUI)
 {
     //Date
     year = Number(getCookie("year"));
@@ -330,7 +330,10 @@ function LoadGame()
         steelEfficiency = 1;
         aluminumEfficiency = 1;
     }
-    UpdateUI();
+    if(updateUI)
+    {
+        UpdateUI();
+    }
 }
 
 function OpenHistory()
@@ -347,6 +350,21 @@ function OpenWar()
 {
     SaveGame();
     window.location.href='war.html';
+}
+function OpenTrade()
+{
+    SaveGame();
+    window.location.href='trade.html';
+}
+function OpenEspionage()
+{
+    SaveGame();
+    window.location.href='espionage.html';
+}
+function OpenMilitary()
+{
+    SaveGame();
+    window.location.href='military.html';
 }
 function ClosePage()
 {

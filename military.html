@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 <head>
-    <title>War</title>
+    <title>Military</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -11,13 +11,16 @@
     <meta name="theme-color" content="#ffffff">
 
     <script src="js/basic.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/military.js"></script>
+
     <link rel = "stylesheet"
     type = "text/css"
     href = "css/baseStyle.css" />
 </head>
 
 <html>
-    <body>
+    <body onload="LoadGame(false)">
         <div>
             <h1>
                 <a href="index.html"><img src = "favicon-32x32.png"></a> <a href="index.html" class="text-link">The Economy Wars</a>
@@ -26,7 +29,13 @@
             <hr>
             <button class="button button2" onclick="ClosePage()">Back</button>
             <hr>
-            <p id="testload">Sorry! There is no war in Bothers.</p>
+            <p id="infDivs">0</p>
+            <hr>
+            <button onclick="TrainAmount(1)" class="button button2">x1</button>
+            <button onclick="TrainAmount(5)" class="button button2">x5</button>
+            <button onclick="TrainAmount(10)" class="button button2">x10</button>
+            <hr>
+            <button onclick="CreateDivision(0,trainCount)" class="button button2">Create Infantry Division</button>
         </div>
     </body>
 </html>

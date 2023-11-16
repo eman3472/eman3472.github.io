@@ -24,12 +24,12 @@
 </head>
 
 <html>
-    <body onload="LoadGame()">
+    <body onload="LoadGame(true)">
         <div>
             <h1>
                 <a href="index.html"><img src = "favicon-32x32.png"></a> <a href="index.html" class="text-link">The Economy Wars</a>
             </h1>
-            <h3>v0.0.3 Aeturnum</h3>
+            <h3>v0.0.4 Aeturnum</h3>
         </div>
         <hr>
         <button class="button button2" onclick="ResetGame()">Reset Game</button>
@@ -40,6 +40,10 @@
         <button class="button button2" onclick="OpenHistory()">Events</button>
         <button class="button button2" onclick="OpenDiplo()">Diplomacy</button>
         <button class="button button2" onclick="OpenWar()">War</button>
+        <br>
+        <button class="button button2" onclick="OpenTrade()">Trade</button>
+        <button class="button button2" onclick="OpenEspionage()">Espionage</button>
+        <button class="button button2" onclick="OpenMilitary()">Military</button>
         <hr>
         <h3>Stats</h3>
         <p id="country">Vsera</p>
