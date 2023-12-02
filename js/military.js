@@ -1,15 +1,15 @@
 ﻿var trainCount = 1;
 
-function CreateDivision(type,count)
+function CreateDivision(type)
 {
     switch(type)
     {
         //Infantry
         case 0:
-            if(infEq >= 10 * count && supEq >= 5 * count)
+            if(infEq >= 10 * trainCount && supEq >= 5 * trainCount)
             {
-                infEq -= 10 * count;
-                supEq -= 5 * count;
+                infEq -= 10 * trainCount;
+                supEq -= 5 * trainCount;
                 infDivs++;
             }
             else
@@ -19,10 +19,10 @@ function CreateDivision(type,count)
             break;
         //Tank
         case 1:
-            if(tanks >= 1 * count && supEq >= 5 * count)
+            if(tanks >= 1 * trainCount && supEq >= 5 * trainCount)
             {
-                tanks -= 1 * count;
-                supEq -= 5 * count;
+                tanks -= 1 * trainCount;
+                supEq -= 5 * trainCount;
                 tankDivs++;
             }
             else
@@ -32,10 +32,10 @@ function CreateDivision(type,count)
             break;
         //Fighter
         case 2:
-            if(fjets >= 1 * count && supEq >= 5 * count)
+            if(fjets >= 1 * trainCount && supEq >= 5 * trainCount)
             {
-                fjets -= 1 * count;
-                supEq -= 5 * count;
+                fjets -= 1 * trainCount;
+                supEq -= 5 * trainCount;
                 fjDivs++;
             }
             else
@@ -45,10 +45,10 @@ function CreateDivision(type,count)
             break;
         //Bomber
         case 3:
-            if(bjets >= 1 * count && supEq >= 5 * count)
+            if(bjets >= 1 * trainCount && supEq >= 5 * trainCount)
             {
-                bjets -= 10 * count;
-                supEq -= 5 * count;
+                bjets -= 10 * trainCount;
+                supEq -= 5 * trainCount;
                 bjDivs++;
             }
             else
@@ -58,10 +58,10 @@ function CreateDivision(type,count)
             break;
         //Battleship
         case 4:
-            if(bships >= 1 * count && supEq >= 5 * count)
+            if(bships >= 1 * trainCount && supEq >= 5 * trainCount)
             {
-                bships -= 1 * count;
-                supEq -= 5 * count;
+                bships -= 1 * trainCount;
+                supEq -= 5 * trainCount;
                 bsDivs++;
             }
             else
