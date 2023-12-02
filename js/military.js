@@ -1,16 +1,4 @@
-﻿//Infantry and Tank Divisions (1,2)
-var infDivs = 0;
-var tankDivs = 0;
-
-//Airborne Divisions (2,3)
-var fjDivs = 0;
-var bjDivs = 0;
-
-//Naval Divisions (4)
-var bsDivs;
-
-//Misc.
-var trainCount = 1;
+﻿var trainCount = 1;
 
 function CreateDivision(type,count)
 {
@@ -86,6 +74,7 @@ function CreateDivision(type,count)
             console.log("Not a valid division type!")
             break;
     }
+    SaveGame();
     UpdateMilUI();
 }
 
@@ -96,5 +85,9 @@ function TrainAmount(amount)
 
 function UpdateMilUI()
 {
-    document.getElementById("infDivs").innerHTML = infDivs;
+    document.getElementById("infDivs").innerHTML = "Infantry: " + infDivs;
+    document.getElementById("tankDivs").innerHTML = "Tanks: " + tankDivs;
+    document.getElementById("fjDivs").innerHTML = "Fighters: " + fjDivs;
+    document.getElementById("bjDivs").innerHTML = "Bombers: " + bjDivs;
+    document.getElementById("bsDivs").innerHTML = "Battleships: " + bsDivs;
 }

@@ -264,9 +264,16 @@ function SaveGame()
     setCookie("oilEfficiency",oilEfficiency,3650);
     setCookie("steelEfficiency",steelEfficiency,3650);
     setCookie("aluminumEfficiency",aluminumEfficiency,3650);
+
+    //Divisions
+    setCookie("infDivs",infDivs,3650);
+    setCookie("tankDivs",tankDivs,3650);
+    setCookie("fjDivs",fjDivs,3650);
+    setCookie("bjDivs",bjDivs,3650);
+    setCookie("bsDivs",bsDivs,3650);
 }
 
-function LoadGame(updateUI)
+function LoadGame(updateUI,milUI)
 {
     //Date
     year = Number(getCookie("year"));
@@ -303,6 +310,13 @@ function LoadGame(updateUI)
     steelEfficiency =  Number(getCookie("steelEfficiency"));
     aluminumEfficiency =  Number(getCookie("aluminumEfficiency"));
 
+    //Divisions
+    infDivs =  Number(getCookie("infDivs"));
+    tankDivs =  Number(getCookie("tankDivs"));
+    fjDivs =  Number(getCookie("fjDivs"));
+    bjDivs =  Number(getCookie("bjDivs"));
+    bsDivs =  Number(getCookie("bsDivs"));
+
     //Resets game if there is no cookie
     if(Number(getCookie("year")) == 0)
     {
@@ -329,10 +343,19 @@ function LoadGame(updateUI)
         oilEfficiency = 1;
         steelEfficiency = 1;
         aluminumEfficiency = 1;
+        infDivs = 0;
+        tankDivs = 0;
+        fjDivs = 0;
+        bjDivs = 0;
+        bsDivs = 0;
     }
     if(updateUI)
     {
         UpdateUI();
+    }
+    if(milUI)
+    {
+        UpdateMilUI();
     }
 }
 
