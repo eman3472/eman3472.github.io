@@ -11,6 +11,8 @@
     <meta name="theme-color" content="#ffffff">
 
     <script src="js/basic.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/war.js"></script>
     <link rel = "stylesheet"
     type = "text/css"
     href = "css/baseStyle.css" />
@@ -26,7 +28,36 @@
             <hr>
             <button class="button button2" onclick="ClosePage()">Back</button>
             <hr>
-            <p id="testload">Sorry! There is no war in Bothers.</p>
+            <h1>Wars</h1>
+            <div id="wars"><h2>Vseren-Altfordian War</h2><p>Belligerents: Vsera, Baspola | Altfordia, Karmeyskia</p></div>
+            <hr>
+            <h1>Current Battle</h1>
+            <h2 id="battleName">Battle of Bothers</h2>
+            <p>Attacker: Vsera</p>
+            <p>Defender: Altfordia</p>
+            <p>Air Supremacy: Defender</p>
+            <table>
+                <tr>
+                  <th>Flank</th>
+                  <th>Defenders</th>
+                  <th>Attackers</th>
+                </tr>
+                <tr>
+                  <td>Left</td>
+                  <td>Tank</td>
+                  <td>Tank</td>
+                </tr>
+                <tr>
+                  <td>Center</td>
+                  <td>Infantry</td>
+                  <td>Infantry</td>
+                </tr>
+                <tr>
+                    <td>Right</td>
+                    <td>Tank</td>
+                    <td>Infantry</td>
+                  </tr>
+              </table>
         </div>
     </body>
 </html>

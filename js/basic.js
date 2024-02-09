@@ -389,6 +389,11 @@ function OpenMilitary()
     SaveGame();
     window.location.href='military.html';
 }
+function OpenEagle()
+{
+    SaveGame();
+    window.location.href='eagle.html';
+}
 function ClosePage()
 {
     window.location.href='game.html';
