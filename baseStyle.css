@@ -1,0 +1,41 @@
+﻿.center 
+{
+    left: 50%;
+    position: absolute;
+}
+a.text-link{
+    color: inherit;
+    text-decoration: none;
+}
+p
+{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: 2px solid #083a4b;
+    color: white;
+    padding: 3px 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-family: Verdana, Tahoma, sans-serif;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+.button2 {background-color: #0d6481;} /* Blue */
+.button3 {background-color: #f44336;} /* Red */ 
+.button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+.button5 {background-color: #555555;} /* Black */
+
+.gamedesc
+{
+    width: 700px;
+}
+
+table, th, td {
+    border: 1px solid black;
+  }

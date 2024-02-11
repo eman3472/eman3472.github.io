@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<head>
+    <title>Military</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-imgs/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-imgs/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-imgs/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="js/basic.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/military.js"></script>
+
+    <link rel = "stylesheet"
+    type = "text/css"
+    href = "css/baseStyle.css" />
+</head>
+
+<html>
+    <body onload="LoadGame(false,true)">
+        <h1>eman3472</h1>
+        <div>
+            <h1>
+                <a href="../index.html"><img src = "favicon-32x32.png"></a> <a href="../index.html" class="text-link">The Economy Wars</a>
+            </h1>
+            <h3>v0.0.4 Aeturnum</h3>
+            <hr>
+            <button class="button button2" onclick="ClosePage()">Back</button>
+            <hr>
+            <p id="inf">0 Infantry Equipment</p>
+            <p id="sup">0 Support Equipment</p>
+            <p id="tank">0 Tanks</P>
+            <p id="fjet">0 Fighter Jets</p>
+            <p id="bjet">0 Bomber Jets</p>
+            <p id="bship">0 Battleships</p>
+            <hr>
+            <p id="infDivs">Infantry: 0</p>
+            <p id="tankDivs">Tanks: 0</p>
+            <p id="fjDivs">Fighters: 0</p>
+            <p id="bjDivs">Bombers: 0</p>
+            <p id="bsDivs">Battleships: 0</p>
+            <hr>
+            <button onclick="TrainAmount(1)" class="button button2">x1</button>
+            <button onclick="TrainAmount(5)" class="button button2">x5</button>
+            <button onclick="TrainAmount(10)" class="button button2">x10</button>
+            <hr>
+            <button onclick="CreateDivision(0,trainCount)" class="button button2">Create Infantry Division</button>
+            <button onclick="CreateDivision(1,trainCount)" class="button button2">Create Tank Division</button>
+            <button onclick="CreateDivision(2,trainCount)" class="button button2">Create Fighter Division</button>
+            <br>
+            <button onclick="CreateDivision(3,trainCount)" class="button button2">Create Bomber Division</button>
+            <button onclick="CreateDivision(4,trainCount)" class="button button2">Create Battleship Fleet</button>
+        </div>
+    </body>
+</html>

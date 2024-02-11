@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+
+<head>
+    <title>The Economy Wars</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-imgs/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-imgs/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-imgs/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="js/basic.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/equipment.js"></script>
+    <script src="js/diplomacy.js"></script>
+    <script src="js/resources.js"></script>
+
+    <link rel = "stylesheet"
+        type = "text/css"
+        href = "css/baseStyle.css" />
+</head>
+
+<html>
+    <body onload="LoadGame(true,false)">
+        <a href="../index.html" class="text-link"><h1>eman3472</h1></a>
+        <div>
+            <h1>
+                <a href="../index.html"><img src = "favicon-32x32.png"></a> <a href="../index.html" class="text-link">The Economy Wars</a>
+            </h1>
+            <h3>v0.0.4 Aeturnum</h3>
+        </div>
+        <hr>
+        <button class="button button2" onclick="ResetGame()">Reset Game</button>
+        <hr>
+        <h2 id="year">5 - 10 - 1970 A.D.</h2>
+        <button class="button button2" onclick="TickTime()">End Turn</button>
+        <hr>
+        <button class="button button2" onclick="OpenHistory()">Events</button>
+        <button class="button button2" onclick="OpenDiplo()">Diplomacy</button>
+        <button class="button button2" onclick="OpenWar()">War</button>
+        <br>
+        <button class="button button2" onclick="OpenTrade()">Trade</button>
+        <button class="button button2" onclick="OpenEspionage()">Espionage</button>
+        <button class="button button2" onclick="OpenMilitary()">Military</button>
+        <hr>
+        <h3>Stats</h3>
+        <p id="country">Vsera</p>
+        <p id="gdp">350pp</p>
+        <p id="manpower">31.74 Million Manpower</p>
+        <hr>
+        <h3>Resources</h3>
+        <p id="steel">Steel: 50</p>
+        <p id="oil">Oil: 50</p>
+        <p id="aluminum">Aluminum: 50</p>
+        <hr>
+        <h3>Purchase Military Equipment</h3>
+        <p id="inf">0 Infantry Equipment</p>
+        <p id="sup">0 Support Equipment</p>
+        <p id="tank">0 Tanks</P>
+        <p id="fjet">0 Fighter Jets</p>
+        <p id="bjet">0 Bomber Jets</p>
+        <p id="bship">0 Battleships</p>
+        <br>
+        <button class="button button2" onclick="PurchaseEQ(0)">(10x) Infantry Eq. (10pp)</button> <button class="button button2" onclick="PurchaseEQ(1)">(10x) Support Eq. (10pp)</button> <button class="button button2" onclick="PurchaseEQ(2)">(1x) Tank (100p)</button>
+        <br>
+        <br>
+        <button class="button button2" onclick="PurchaseEQ(3)">(1x) Fighter Jet (250pp)</button> <button class="button button2" onclick="PurchaseEQ(4)">(1x) Bomber Jet (260pp)</button> <button class="button button2" onclick="PurchaseEQ(5)">(1x) Battleship (350p)</button>
+        <hr>
+    </body>
+</html>
