@@ -13,6 +13,16 @@ function LoadEvents()
         event0Read = true;
         setCookie("event0Read",event0Read,3650);
     }
+    if (tempTurn >= 20)
+    {
+        event1Read = true;
+        setCookie("event1Read",event1Read,3650);
+    }
+    if (tempTurn >= 30)
+    {
+        event2Read = true;
+        setCookie("event2Read",event2Read,3650);
+    }
     document.getElementById("events").innerHTML = eventsFull;
 }
 
