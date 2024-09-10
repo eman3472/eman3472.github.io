@@ -192,7 +192,16 @@ function TickTime()
     {
         event0Read = false;
         console.log(event0Read);
-        setCookie("event0Read",event0Read,3650);
+    }
+    if (turn >= 20)
+    {
+        event1Read = false;
+        console.log(event1Read);
+    }
+    if (turn >= 30)
+    {
+        event1Read = false;
+        console.log(event1Read);
     }
     TickPP();
     TickManpower();
@@ -239,6 +248,16 @@ function UpdateUI()
     {
         document.getElementById("eventsButton").outerHTML = "<button id='eventsButton' class='button button3' onclick='OpenHistory()'>Events</button>";
         console.log(event0Read);
+    }
+    if (event1Read == false)
+    {
+        document.getElementById("eventsButton").outerHTML = "<button id='eventsButton' class='button button3' onclick='OpenHistory()'>Events</button>";
+        console.log(event1Read);
+    }
+    if (event2Read == false)
+    {
+        document.getElementById("eventsButton").outerHTML = "<button id='eventsButton' class='button button3' onclick='OpenHistory()'>Events</button>";
+        console.log(event2Read);
     }
     else
     {
@@ -330,7 +349,7 @@ function LoadGame(updateUI,milUI)
 
     //Divisions
     infDivs =  Number(getCookie("infDivs"));
-    tankDivs =  Number(getCookie("tankDivs"));
+    tankDivs = Number(getCookie("tankDivs"));
     fjDivs =  Number(getCookie("fjDivs"));
     bjDivs =  Number(getCookie("bjDivs"));
     bsDivs =  Number(getCookie("bsDivs"));
