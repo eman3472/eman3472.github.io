@@ -337,6 +337,8 @@ function LoadGame(updateUI,milUI)
 
     //Events
     event0Read = Boolean(getCookie("event0Read"));
+    event1Read = Boolean(getCookie("event1Read"));
+    event2Read = Boolean(getCookie("event2Read"));
 
     //Resets game if there is no cookie
     if(Number(getCookie("year")) == 0)
