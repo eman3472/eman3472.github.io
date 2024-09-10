@@ -35,3 +35,6 @@ var bjDivs = 0;
 
 //  Naval Divisions (4)
 var bsDivs = 0;
+
+//  Events
+var event0Read = true;
