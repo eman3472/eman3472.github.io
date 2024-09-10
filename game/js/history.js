@@ -6,6 +6,13 @@ function LoadEvents()
     console.log(month);
     console.log(day);
     TickEvent();
+    //  Decides if event has been read
+    let tempTurn = Number(getCookie("turn"));
+    if (tempTurn >= 5)
+    {
+        event0Read = true;
+        setCookie("event0Read",event0Read,3650);
+    }
     document.getElementById("events").innerHTML = eventsFull;
 }
 

@@ -187,6 +187,13 @@ function TickTime()
         IncrementDay();
     }
     turn += 5;
+    //  Decides if event has happened, and sets the event to unread.
+    if (turn >= 5)
+    {
+        event0Read = false;
+        console.log(event0Read);
+        setCookie("event0Read",event0Read,3650);
+    }
     TickPP();
     TickManpower();
     TickResources();
@@ -226,6 +233,17 @@ function UpdateUI()
     document.getElementById("fjet").innerHTML = fjets + " Fighter Jets";
     document.getElementById("bjet").innerHTML = bjets + " Bomber Jets";
     document.getElementById("bship").innerHTML = bships + " Battleships";
+
+    //Let player know if there is a new event
+    if (event0Read == false)
+    {
+        document.getElementById("eventsButton").outerHTML = "<button id='eventsButton' class='button button3' onclick='OpenHistory()'>Events</button>";
+        console.log(event0Read);
+    }
+    else
+    {
+        document.getElementById("eventsButton").outerHTML = "<button id='eventsButton' class='button button2' onclick='OpenHistory()'>Events</button>";
+    }
 }
 
 function SaveGame()
@@ -316,6 +334,9 @@ function LoadGame(updateUI,milUI)
     fjDivs =  Number(getCookie("fjDivs"));
     bjDivs =  Number(getCookie("bjDivs"));
     bsDivs =  Number(getCookie("bsDivs"));
+
+    //Events
+    event0Read = Boolean(getCookie("event0Read"));
 
     //Resets game if there is no cookie
     if(Number(getCookie("year")) == 0)
