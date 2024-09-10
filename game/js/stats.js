@@ -38,3 +38,5 @@ var bsDivs = 0;
 
 //  Events
 var event0Read = true;
+var event1Read = true;
+var event2Read = true;
