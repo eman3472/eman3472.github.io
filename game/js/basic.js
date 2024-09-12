@@ -188,21 +188,23 @@ function TickTime()
     }
     turn += 5;
     //  Decides if event has happened, and sets the event to unread.
-    if (turn >= 5)
+    if (turn == 5)
     {
         event0Read = false;
-        location.reload();
         console.log(event0Read);
+        location.reload();
     }
-    if (turn >= 20)
+    if (turn == 20)
     {
         event1Read = false;
         console.log(event1Read);
+        location.reload();
     }
-    if (turn >= 30)
+    if (turn == 30)
     {
         event1Read = false;
         console.log(event1Read);
+        location.reload();
     }
     TickPP();
     TickManpower();
