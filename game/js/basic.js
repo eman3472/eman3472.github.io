@@ -390,6 +390,9 @@ function LoadGame(updateUI,milUI)
         fjDivs = 0;
         bjDivs = 0;
         bsDivs = 0;
+        event0Read = true;
+        event1Read = true;
+        event2Read = true;
     }
     if(updateUI)
     {
