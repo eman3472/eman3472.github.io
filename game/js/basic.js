@@ -356,6 +356,8 @@ function LoadGame(updateUI,milUI)
 
     //Events
     event0Read = Boolean(getCookie("event0Read"));
+    event1Read = Boolean(getCookie("event1Read"));
+    event2Read = Boolean(getCookie("event2Read"));
 
     //Resets game if there is no cookie
     if(Number(getCookie("year")) == 0)
@@ -388,6 +390,9 @@ function LoadGame(updateUI,milUI)
         fjDivs = 0;
         bjDivs = 0;
         bsDivs = 0;
+        event0Read = true;
+        event1Read = true;
+        event2Read = true;
     }
     if(updateUI)
     {
