@@ -63,3 +63,20 @@ function AppendEvent(id)
             break;
     }
 }
+
+//function ReadEvent()
+//{
+//    if (turn >= 5 && event0Read == true)
+//    {
+//        event0Read = false;
+//    }
+//    if (turn >= 20 && event1Read == true)
+//    {
+//       event1Read = false;
+//    }
+//    if (turn >= 30 && event2Read == true)
+//    {
+//        event1Read = false;
+//    }
+//    SaveGame();
+//}
