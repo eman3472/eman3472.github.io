@@ -191,6 +191,7 @@ function TickTime()
     if (turn >= 5)
     {
         event0Read = false;
+        location.reload();
         console.log(event0Read);
     }
     if (turn >= 20)
