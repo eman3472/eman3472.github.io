@@ -309,6 +309,11 @@ function SaveGame()
     setCookie("fjDivs",fjDivs,3650);
     setCookie("bjDivs",bjDivs,3650);
     setCookie("bsDivs",bsDivs,3650);
+
+    //Events
+    setCookie("event0Read",event0Read,3650);
+    setCookie("event1Read",event1Read,3650);
+    setCookie("event2Read",event2Read,3650);
 }
 
 function LoadGame(updateUI,milUI)
