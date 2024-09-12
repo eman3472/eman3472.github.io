@@ -314,8 +314,6 @@ function SaveGame()
     setCookie("event0Read",event0Read,3650);
     setCookie("event1Read",event1Read,3650);
     setCookie("event2Read",event2Read,3650);
-
-    location.reload();
 }
 
 function LoadGame(updateUI,milUI)
